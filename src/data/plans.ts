@@ -475,7 +475,7 @@ export const FAQ_DATA: FaqItem[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     name: "Paulo Gomes",
-    role: "Dono do Servidor Craftlandia RPG",
+    role: "Dono do Servidor Nekolandia RPG",
     avatar: "/person/person3.png",
     stars: 5,
     highlightTag: "Ping de 12ms",
