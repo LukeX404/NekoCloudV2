@@ -14,7 +14,11 @@ import {
 import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = React.useState(2026);
+
+  React.useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   return (
     <footer className="bg-slate-950 text-slate-400 border-t border-slate-800/80 pt-16 pb-12">
