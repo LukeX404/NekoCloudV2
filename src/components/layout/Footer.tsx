@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { 
   FaDiscord, 
@@ -11,12 +11,12 @@ import {
   FaYoutube, 
   FaWhatsapp 
 } from "react-icons/fa";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = React.useState(2026);
+  const [currentYear, setCurrentYear] = useState(2026);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setCurrentYear(new Date().getFullYear());
   }, []);
 
@@ -24,7 +24,6 @@ export default function Footer() {
     <footer className="bg-slate-950 text-slate-400 border-t border-slate-800/80 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
-          {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-600 flex items-center justify-center text-white shadow-md shadow-sky-500/30">
@@ -44,7 +43,6 @@ export default function Footer() {
               Hospedagem de alto desempenho equipada com processadores <strong className="text-white">AMD Ryzen 9 9950X (Zen 5)</strong>, proteção Anti-DDoS Cloudflare de 228 Tbps e ativação automática.
             </p>
 
-            {/* Social Icons using react-icons */}
             <div className="pt-2">
               <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
                 Comunidade &amp; Redes
@@ -113,7 +111,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Nav Links */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Navegação
@@ -147,7 +144,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Solutions */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Produtos &amp; Soluções
@@ -176,7 +172,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
               Atendimento
@@ -217,13 +212,12 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            &copy; {currentYear} NekoCloud. Todos os direitos reservados.
+            &copy; {currentYear} NekoCloud. Licença MIT - Código Livre para Uso.
           </p>
           <p className="text-center md:text-right">
-            Minecraft é uma marca registrada da Mojang Studios / Microsoft. A NekoCloud não possui afiliação ou endosso pela Mojang Studios.
+            Minecraft é uma marca registrada da Mojang Studios / Microsoft. Projeto conceitual sem afiliação direta.
           </p>
         </div>
       </div>

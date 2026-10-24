@@ -46,7 +46,6 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 to-blue-500 flex items-center justify-center text-white shadow-md shadow-sky-500/30 group-hover:scale-105 transition-transform">
               <span className="font-black text-xl">N</span>
@@ -61,7 +60,6 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             {navLinks.map((link) => {
               const active = isActive(link.href);
@@ -83,15 +81,12 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Actions: Theme Toggle & Area do Cliente (Login) */}
           <div className="hidden md:flex items-center gap-3">
-            {/* Status indicator */}
             <div className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               9950X Online
             </div>
 
-            {/* Theme Switcher */}
             <button
               onClick={toggleTheme}
               aria-label="Alternar tema"
@@ -104,7 +99,6 @@ export default function Navbar() {
               )}
             </button>
 
-            {/* Login / Client Area Button */}
             <Link
               href="/login"
               className="px-4 py-2 text-sm font-semibold rounded-xl text-slate-800 dark:text-white bg-slate-100 dark:bg-slate-800 hover:bg-sky-50 dark:hover:bg-sky-950 hover:text-sky-600 dark:hover:text-sky-400 border border-slate-200 dark:border-slate-700 transition-all flex items-center gap-2"
@@ -113,7 +107,6 @@ export default function Navbar() {
               <span>Área do Cliente</span>
             </Link>
 
-            {/* Quick Action Plan Button */}
             <Link
               href="/minecraft"
               className="px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 rounded-xl shadow-md shadow-sky-500/25 transition-all hover:shadow-lg hover:shadow-sky-500/35 hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-1.5"
@@ -123,7 +116,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Right Controls */}
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={toggleTheme}
@@ -148,7 +140,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white/95 dark:bg-[#070d18]/95 backdrop-blur-xl border-b border-sky-100 dark:border-sky-950/80 px-4 pt-3 pb-6 animate-in slide-in-from-top-4 duration-200 shadow-2xl">
           <div className="flex flex-col gap-2">

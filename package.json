@@ -1,7 +1,28 @@
 {
-  "name": "nekocloud_app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nekocloud-v2",
+  "version": "2.0.0",
+  "description": "NekoCloud V2 - Next-Gen Minecraft & Cloud Hosting Landing Page built with Next.js 16, React 19, TypeScript and Tailwind CSS.",
+  "author": "LukeTheNeko (https://github.com/LukeX404)",
+  "license": "MIT",
+  "homepage": "https://github.com/LukeX404/NekoCloudV2#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukeX404/NekoCloudV2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LukeX404/NekoCloudV2/issues"
+  },
+  "keywords": [
+    "minecraft",
+    "hosting",
+    "landing-page",
+    "nextjs",
+    "react19",
+    "typescript",
+    "tailwindcss",
+    "cloud",
+    "ryzen-9950x"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

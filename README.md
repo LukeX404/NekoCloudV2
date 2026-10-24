@@ -1,98 +1,82 @@
-# ☁️ NekoCloud V2 — Next-Gen Minecraft & Cloud Hosting Landing Page
+# ☁️ NekoCloud V2 — Next-Gen Minecraft & Cloud Hosting
 
-> ⚠️ **Aviso de Propósito Educacional / Projeto de Aprendizado:**  
-> Este projeto é uma **landing page desenvolvida para fins de estudo, aprendizado e portfólio**. Trata-se de uma refatoração e reconstrução completa de uma versão antiga criada no passado ([NekoCloud v1](https://github.com/LukeX404/NekoCloud)), tendo como principal objetivo explorar os recursos mais recentes do ecossistema **Next.js (App Router)**, **React 19**, **TypeScript** e **Tailwind CSS**, além de técnicas avançadas de UI/UX, temas dinâmicos e design responsivo.
+<p align="center">
+  <img src="./public/og-image.jpg" alt="NekoCloud V2 Banner" width="100%" style="border-radius: 16px;" />
+</p>
 
----
-
-## 📖 Sobre o Projeto
-
-A **NekoCloud V2** é a recriação conceitual de um portal de hospedagem para servidores de jogos e computação em nuvem, com foco especial na comunidade de **Minecraft (Java & Bedrock)**, **VPS Cloud KVM** e **Servidores Bare Metal Dedicados**.
-
-O projeto conta com:
-- Design gamer/tech premium com paleta selecionada em tons de **Branco com Azul** (Modo Claro) e **Deep Navy com Azul Neon** (Modo Noturno).
-- Ausência deliberada de sistema de autenticação complexo no backend, contando com uma tela demonstrativa e contratação direta e rápida via canais oficiais (WhatsApp e Discord).
-- Arquitetura moderna baseada em rotas dedicadas e componentes reutilizáveis.
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16.4.3-black?style=for-the-badge&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-19.3.0-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="MIT License" />
+</p>
 
 ---
 
-## ✨ Funcionalidades e Destaques
+## 💡 Sobre o Projeto & Aprendizado
 
-### 🎨 Design System & Temas (Azul & Branco / Azul Noturno)
-- Alternador de tema em tempo real (Sol ☀️ / Lua 🌙) presente no cabeçalho.
-- Persistência automática da preferência do usuário via `localStorage`.
-- Estilização moderna com efeitos de vidro (*glassmorphism*), sombras volumétricas e iluminação suave.
+A **NekoCloud V2** é uma landing page moderna de alto impacto para serviços de hospedagem de servidores **Minecraft**, instâncias **VPS Cloud KVM** e servidores dedicados **Bare Metal**, equipada conceitualmente com processadores **AMD Ryzen 9 9950X (Zen 5)** e mitigação **Anti-DDoS de 228 Tbps**.
 
-### 📱 Experiência Mobile-First Total
-- Navegação fluida em smartphones, tablets e monitores ultra-wide.
-- Menu drawer animado com links rápidos e acesso direto à área do cliente.
-
-### 🖥️ Hardware de Alta Performance
-- Destaque para os novos processadores **AMD Ryzen 9 9950X (Zen 5)** com boost de até 5.7 GHz.
-- Proteção Anti-DDoS corporativa com **Cloudflare Magic Transit** mitigando até 228 Tbps.
-- Armazenamento em SSDs NVMe Gen4 Enterprise com altas taxas de IOPS.
-
-### 🗺️ Páginas e Seções Implementadas
-1. **Página Inicial (`/`)**:
-   - Hero dinâmico com console simulado de servidor em tempo real (TPS 20.0, Uptime 99.9%).
-   - Seletor de localização com teste de latência e cópia do IP de teste com 1 clique (Brasil 🇧🇷 e Canadá 🇨🇦).
-   - Grade com os 6 planos icônicos (Madeira, Ferro, Redstone, Ouro, Diamante e Netherita).
-   - Modal de checkout sem fricção para solicitação rápida.
-   - Diferenciais, contadores de métricas animadas, depoimentos de clientes e FAQ sanfonado.
-2. **Minecraft Hosting (`/minecraft`)**:
-   - Página exclusiva dedicada a jogadores e comunidades de Minecraft Java e Bedrock (Crossplay GeyserMC).
-3. **VPS Cloud (`/vps`)**:
-   - Planos de servidores virtuais (Start, Pro, Ultra e Enterprise) com seletor de ciclo (Mensal/Anual com 15% OFF) e escolha de sistema operacional (Ubuntu, Debian, AlmaLinux, Windows Server).
-4. **Bare Metal (`/bare-metal`)**:
-   - Infraestrutura dedicada para grandes redes (Ryzen 7 7700X, Ryzen 9 9950X e AMD EPYC 9354 com IPMI dedicado).
-5. **Área do Cliente Demonstrativa (`/login`)**:
-   - Interface conceitual de login com opções sociais não funcionais de autenticação via **Google** e **Steam**.
+> 🎓 **Projeto de Estudo e Aprendizado:**  
+> Este projeto foi desenvolvido com finalidade educacional e para portfólio prático, demonstrando a implementação das tecnologias mais recentes da web:
+> - **Next.js 16 (App Router)** com compilação ultra rápida via **Turbopack**.
+> - **React 19** com componentes modernos e tipagem estrita com **TypeScript**.
+> - Sistema dinâmico de temas (**Tema Claro em Branco e Azul** / **Tema Noturno em Deep Navy e Azul Neon**) com alternador instantâneo e persistência local.
+> - Suporte a **OpenGraph e Twitter Cards** de alta resolução para pré-visualização no Discord e redes sociais.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🔓 Licença MIT — Código 100% Livre para Uso!
 
-- **Framework:** [Next.js](https://nextjs.org/) (App Router & Turbopack)
-- **Biblioteca de Interface:** [React](https://react.dev/)
-- **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
-- **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
-- **Ícones:** [Lucide React](https://lucide.dev/) e [React Icons](https://react-icons.github.io/react-icons/)
-- **Fontes:** Google Fonts (`Geist Sans` & `Geist Mono`)
+Este repositório está sob a licença **MIT**. Isso significa que:
 
----
+- ✅ **Qualquer pessoa é totalmente livre para usar este projeto.**
+- ✅ Você pode clonar, modificar, distribuir, estudar, adicionar novas features ou utilizar como base para sua própria landing page de hospedagem ou portfólio.
+- ✅ Pode ser usado tanto para projetos pessoais quanto para projetos comerciais.
+- ✅ Sinta-se à vontade para abrir *Pull Requests* e contribuir com melhorias!
 
-## 🚀 Como Executar Localmente
-
-### Pré-requisitos
-- Node.js instalado (v18.17 ou superior, recomendado v20+)
-- npm, yarn ou pnpm
-
-### Passos:
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/LukeX404/NekoCloudV2.git
-   cd NekoCloudV2
-   ```
-
-2. Instale as dependências:
-   ```bash
-   npm install
-   # ou
-   yarn install
-   ```
-
-3. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   # ou
-   yarn dev
-   ```
-
-4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes legais.
 
 ---
 
-## 📜 Licença e Direitos
+## 🚀 Páginas e Recursos Implementados
 
-- Este projeto foi desenvolvido exclusivamente para fins de estudo e aprimoramento técnico.
-- *Minecraft* é uma marca registrada da Mojang Studios / Microsoft. A NekoCloud é um projeto conceitual independente sem afiliação direta.
+| Rota | Descrição |
+|---|---|
+| [`/`](https://github.com/LukeX404/NekoCloudV2) | **Página Inicial:** Hero dinâmico, seletor de versões 1-clique, teste de latência e IP, planos Minecraft, diferenciais, depoimentos e FAQ. |
+| [`/minecraft`](https://github.com/LukeX404/NekoCloudV2) | **Minecraft Hosting:** Planos Madeira a Netherita (2GB a 64GB RAM DDR5), suporte a GeyserMC Bedrock e Java 1.8 a 1.21.x. |
+| [`/vps`](https://github.com/LukeX404/NekoCloudV2) | **VPS Cloud KVM:** Planos Start a Enterprise com Ryzen 9 9950X, seletor de SO (Ubuntu, Debian, AlmaLinux, Windows Server) e ciclo com 15% OFF. |
+| [`/bare-metal`](https://github.com/LukeX404/NekoCloudV2) | **Bare Metal Dedicados:** Servidores 100% dedicados (Ryzen 7 7700X, Ryzen 9 9950X e AMD EPYC 9354) com IPMI e Anti-DDoS corporativo. |
+| [`/login`](https://github.com/LukeX404/NekoCloudV2) | **Área do Cliente Demonstrativa:** Tela de login conceitual com botões sociais via **Google** e **Steam**. |
+
+---
+
+## 🛠️ Como Executar Localmente
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/LukeX404/NekoCloudV2.git
+
+# 2. Acesse a pasta
+cd NekoCloudV2
+
+# 3. Instale as dependências
+npm install
+# ou
+yarn install
+
+# 4. Inicie o servidor local
+npm run dev
+# ou
+yarn dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+---
+
+## 👤 Autor
+
+Desenvolvido por **[LukeTheNeko](https://github.com/LukeX404)**.  
+Contribuições, ideias e feedbacks são sempre bem-vindos! 🚀
