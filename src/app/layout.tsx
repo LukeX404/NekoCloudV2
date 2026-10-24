@@ -71,7 +71,9 @@ export const metadata: Metadata = {
     creator: "@nekocloud",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
 };
 
