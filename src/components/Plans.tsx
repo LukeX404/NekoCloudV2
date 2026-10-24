@@ -32,7 +32,7 @@ export default function Plans() {
             Escolha o Plano Perfeito para sua Aventura
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Todos os planos incluem processador <strong className="text-slate-900 dark:text-white">AMD Ryzen 9 7950X</strong>, proteção Anti-DDoS de 228 Tbps, subdomínio grátis e backups automáticos.
+            Todos os planos incluem processador <strong className="text-slate-900 dark:text-white">AMD Ryzen 9 9950X</strong>, proteção Anti-DDoS de 228 Tbps, subdomínio grátis e backups automáticos.
           </p>
         </div>
 

@@ -14,21 +14,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NekoCloud | Hospedagem de Servidores Minecraft - Ryzen 9 7950X & Anti-DDoS",
+  title: "NekoCloud | Hospedagem Minecraft, VPS & Bare Metal - AMD Ryzen 9 9950X",
   description:
-    "Hospedagem de servidores Minecraft de alta performance com processadores AMD Ryzen 9 7950X, proteção Anti-DDoS de 228 Tbps, ativação instantânea e suporte Java & Bedrock.",
+    "Hospedagem de alta performance equipada com processadores AMD Ryzen 9 9950X (Zen 5), proteção Anti-DDoS de 228 Tbps, ativação imediata para Minecraft, VPS Cloud e Bare Metal.",
   keywords: [
     "hospedagem minecraft",
-    "servidor minecraft",
+    "ryzen 9 9950x minecraft",
+    "vps ryzen 9950x",
+    "bare metal brasil",
+    "servidor dedicado 9950x",
     "nekocloud",
-    "minecraft host brasil",
-    "ryzen 9 7950x minecraft",
-    "minecraft bedrock host",
+    "minecraft crossplay host",
   ],
   authors: [{ name: "NekoCloud" }],
   openGraph: {
-    title: "NekoCloud | Hospedagem de Servidores Minecraft",
-    description: "Servidores Minecraft rápidos, confiáveis e com ativação automática instantânea.",
+    title: "NekoCloud | Hospedagem Minecraft, VPS & Bare Metal",
+    description: "Servidores rápidos, confiáveis e com processadores AMD Ryzen 9 9950X de última geração.",
     url: "https://nekocloud.com.br",
     siteName: "NekoCloud",
     locale: "pt_BR",

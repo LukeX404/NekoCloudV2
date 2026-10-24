@@ -13,9 +13,9 @@ export default function Features() {
     },
     {
       icon: Cpu,
-      title: "Processadores AMD Ryzen 9 7950X",
-      desc: "Clocks impressionantes de até 5.7 GHz com memórias RAM DDR5 ECC ultra rápidas e NVMe Gen4, garantindo 20 TPS estáveis até nos modpacks mais pesados.",
-      badge: "Hardware High-End",
+      title: "Processadores AMD Ryzen 9 9950X",
+      desc: "A mais recente arquitetura Zen 5 com clocks de até 5.7 GHz, memórias RAM DDR5 ECC ultra rápidas e NVMe Gen4, garantindo 20 TPS estáveis até nos modpacks mais pesados.",
+      badge: "Zen 5 High-End",
     },
     {
       icon: Zap,
@@ -55,7 +55,7 @@ export default function Features() {
             Por que Escolher a NekoCloud?
           </h2>
           <p className="mt-3 text-base sm:text-lg text-slate-600 dark:text-slate-300">
-            Construímos uma arquitetura pensada exclusivamente para jogadores, donos de servidores e comunidades exigentes de Minecraft.
+            Construímos uma infraestrutura de nova geração com Ryzen 9 9950X focada no máximo desempenho para jogos e servidores dedicados.
           </p>
         </div>
 
@@ -68,7 +68,6 @@ export default function Features() {
                 className="group relative rounded-3xl bg-white dark:bg-[#0b1528] border border-slate-200/90 dark:border-slate-800/80 p-7 sm:p-8 shadow-sm hover:shadow-xl hover:border-sky-300 dark:hover:border-sky-800 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
-                  {/* Top Bar with Icon & Badge */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-12 h-12 rounded-2xl bg-sky-500/10 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 flex items-center justify-center group-hover:scale-110 group-hover:bg-sky-500 group-hover:text-white transition-all duration-300">
                       <Icon className="w-6 h-6" />

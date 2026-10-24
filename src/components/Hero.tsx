@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Link from "next/link";
 import { Shield, Cpu, Activity, ArrowRight, Copy, Check, Sparkles, Terminal } from "lucide-react";
 
 export default function Hero() {
@@ -29,7 +30,7 @@ export default function Hero() {
             {/* Pill Tag */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20 mb-6 shadow-sm">
               <Sparkles className="w-4 h-4 text-sky-500" />
-              <span>Hospedagem Minecraft de Nova Geração</span>
+              <span>Hospedagem Minecraft &amp; Cloud de Nova Geração</span>
             </div>
 
             {/* Main Headline */}
@@ -42,14 +43,14 @@ export default function Hero() {
 
             {/* Subheading */}
             <p className="mt-5 text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-              Servidores com processadores <strong className="text-slate-900 dark:text-white font-semibold">AMD Ryzen 9 7950X</strong>, proteção Anti-DDoS de 228 Tbps e suporte completo para versões Java e Bedrock (celular e console).
+              Infraestrutura de ponta equipada com <strong className="text-slate-900 dark:text-white font-semibold">AMD Ryzen 9 9950X (Zen 5 @ 5.7GHz)</strong>, proteção Anti-DDoS de 228 Tbps e suporte completo para versões Java e Bedrock.
             </p>
 
             {/* Badges Highlights */}
             <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <Cpu className="w-4 h-4 text-sky-500" />
-                <span>Ryzen 9 7950X (5.7GHz)</span>
+                <span>Ryzen 9 9950X (5.7GHz)</span>
               </div>
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-sm">
                 <Shield className="w-4 h-4 text-emerald-500" />
@@ -63,18 +64,25 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href="#planos"
+              <Link
+                href="/minecraft"
                 className="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 rounded-xl shadow-lg shadow-sky-500/30 hover:shadow-sky-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center justify-center gap-2"
               >
-                <span>Conferir Planos</span>
+                <span>Planos Minecraft</span>
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </Link>
+
+              <Link
+                href="/vps"
+                className="w-full sm:w-auto px-6 py-4 text-sm font-semibold rounded-xl bg-white dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:bg-sky-50/50 dark:hover:bg-sky-950/30 transition-all flex items-center justify-center gap-2 shadow-sm"
+              >
+                <span>Ver VPS Cloud</span>
+              </Link>
 
               {/* Quick Copy IP Button */}
               <button
                 onClick={copyIp}
-                className="w-full sm:w-auto px-6 py-4 text-sm font-semibold rounded-xl bg-white dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:bg-sky-50/50 dark:hover:bg-sky-950/30 transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="w-full sm:w-auto px-5 py-4 text-xs font-semibold rounded-xl bg-white dark:bg-slate-900/90 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 hover:bg-sky-50/50 dark:hover:bg-sky-950/30 transition-all flex items-center justify-center gap-2 shadow-sm"
               >
                 {copied ? (
                   <>
@@ -84,7 +92,7 @@ export default function Hero() {
                 ) : (
                   <>
                     <Copy className="w-4 h-4 text-sky-500" />
-                    <span>IP de Teste: <span className="font-mono text-sky-600 dark:text-sky-400">{testIp}</span></span>
+                    <span>IP Teste: <span className="font-mono text-sky-600 dark:text-sky-400">{testIp}</span></span>
                   </>
                 )}
               </button>
@@ -92,11 +100,11 @@ export default function Hero() {
 
             {/* Sub-note */}
             <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
-              ⚡ Ativação automática em menos de 60 segundos após confirmação.
+              ⚡ Ativação automática em menos de 60 segundos com suporte técnico direto.
             </p>
           </div>
 
-          {/* Right Column: Interactive Minecraft Server Mockup Card */}
+          {/* Right Column: Interactive Server Mockup Card */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none rounded-2xl bg-gradient-to-b from-sky-500/20 to-blue-600/10 p-[1px] shadow-2xl shadow-sky-500/10">
               <div className="rounded-2xl bg-white dark:bg-[#0b1528] border border-sky-100 dark:border-sky-950 p-5 md:p-6 shadow-xl">
@@ -125,8 +133,8 @@ export default function Hero() {
                     <span className="text-lg font-bold text-emerald-500">20.0</span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-center">
-                    <span className="block text-[11px] font-medium text-slate-400 uppercase tracking-wider">Ping SP</span>
-                    <span className="text-lg font-bold text-sky-500">12 ms</span>
+                    <span className="block text-[11px] font-medium text-slate-400 uppercase tracking-wider">CPU Host</span>
+                    <span className="text-sm font-bold text-sky-500">R9 9950X</span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-800 text-center">
                     <span className="block text-[11px] font-medium text-slate-400 uppercase tracking-wider">Uptime</span>
@@ -136,13 +144,13 @@ export default function Hero() {
 
                 {/* Simulated Server Console Output */}
                 <div className="font-mono text-xs rounded-xl bg-slate-950 text-slate-200 p-4 space-y-1.5 border border-slate-800 shadow-inner overflow-hidden">
-                  <p className="text-sky-400">[NekoCloud System] Host Ryzen 9 7950X ready.</p>
-                  <p className="text-slate-400">[Paper/Purpur] Loading version 1.21.x & Floodgate...</p>
+                  <p className="text-sky-400">[NekoCloud System] Host AMD Ryzen 9 9950X ready.</p>
+                  <p className="text-slate-400">[Paper/Purpur] Loading version 1.21.x &amp; Floodgate...</p>
                   <p className="text-emerald-400">[GeyserMC] Bedrock bridge initialized on port 19132.</p>
                   <p className="text-slate-400">[AntiDDoS] Cloudflare Magic Transit: ACTIVE (228 Tbps).</p>
                   <div className="flex items-center gap-2 pt-2 border-t border-slate-800 text-emerald-400 font-bold">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                    <span>Done (2.148s)! For help, type &quot;help&quot;</span>
+                    <span>Done (1.822s)! Server ready for players.</span>
                   </div>
                 </div>
 

@@ -2,7 +2,16 @@
 
 import React from "react";
 import Link from "next/link";
-import { MessageSquare, Mail, Phone, ShieldCheck, Heart } from "lucide-react";
+import { 
+  FaDiscord, 
+  FaSteam, 
+  FaInstagram, 
+  FaTwitter, 
+  FaGithub, 
+  FaYoutube, 
+  FaWhatsapp 
+} from "react-icons/fa";
+import { Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
           {/* Brand info */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="#hero" className="flex items-center gap-2 group">
+            <Link href="/" className="flex items-center gap-2 group">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-blue-600 flex items-center justify-center text-white shadow-md shadow-sky-500/30">
                 <span className="font-black text-lg">N</span>
               </div>
@@ -22,18 +31,81 @@ export default function Footer() {
                   Neko<span className="text-sky-400">Cloud</span>
                 </span>
                 <span className="text-[10px] -mt-1 font-semibold text-sky-400 tracking-wider uppercase">
-                  Minecraft Hosting
+                  Minecraft &amp; Cloud Hosting
                 </span>
               </div>
             </Link>
 
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
-              Hospedagem de servidores Minecraft de alto desempenho equipada com processadores AMD Ryzen 9 7950X, proteção Anti-DDoS Cloudflare e ativação automática.
+              Hospedagem de alto desempenho equipada com processadores <strong className="text-white">AMD Ryzen 9 9950X (Zen 5)</strong>, proteção Anti-DDoS Cloudflare de 228 Tbps e ativação automática.
             </p>
 
-            <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium">
+            {/* Social Icons using react-icons */}
+            <div className="pt-2">
+              <span className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                Comunidade &amp; Redes
+              </span>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://discord.gg"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Discord"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-indigo-600 hover:border-indigo-500 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaDiscord size={18} />
+                </a>
+                <a
+                  href="https://steamcommunity.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Steam"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-600 hover:border-sky-500 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaSteam size={18} />
+                </a>
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaInstagram size={18} />
+                </a>
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Twitter / X"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-sky-500 hover:border-sky-400 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaTwitter size={18} />
+                </a>
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-700 hover:border-slate-600 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaGithub size={18} />
+                </a>
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="YouTube"
+                  className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-red-600 hover:border-red-500 transition-all hover:scale-110 shadow-sm"
+                >
+                  <FaYoutube size={18} />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium pt-1">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-              Todos os sistemas operacionais e servidores online
+              Infraestrutura Ryzen 9 9950X operacional
             </div>
           </div>
 
@@ -44,57 +116,57 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#hero" className="hover:text-sky-400 transition-colors">
+                <Link href="/" className="hover:text-sky-400 transition-colors">
                   Início
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#planos" className="hover:text-sky-400 transition-colors">
-                  Planos Minecraft
-                </a>
+                <Link href="/minecraft" className="hover:text-sky-400 transition-colors">
+                  Minecraft Hosting
+                </Link>
               </li>
               <li>
-                <a href="#vantagens" className="hover:text-sky-400 transition-colors">
-                  Vantagens &amp; Infra
-                </a>
+                <Link href="/vps" className="hover:text-sky-400 transition-colors">
+                  VPS Cloud KVM
+                </Link>
               </li>
               <li>
-                <a href="#teste-ping" className="hover:text-sky-400 transition-colors">
-                  Teste de Ping
-                </a>
+                <Link href="/bare-metal" className="hover:text-sky-400 transition-colors">
+                  Bare Metal (Dedicados)
+                </Link>
               </li>
               <li>
-                <a href="#avaliacoes" className="hover:text-sky-400 transition-colors">
-                  Avaliações
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-sky-400 transition-colors">
-                  FAQ
-                </a>
+                <Link href="/login" className="hover:text-sky-400 transition-colors">
+                  Área do Cliente (Login)
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Plans */}
+          {/* Solutions */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
-              Localizações
+              Produtos &amp; Soluções
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#planos" className="hover:text-sky-400 transition-colors">
-                  🇧🇷 Brasil (São Paulo)
-                </a>
+                <Link href="/minecraft" className="hover:text-sky-400 transition-colors">
+                  Servidores Java &amp; Bedrock
+                </Link>
               </li>
               <li>
-                <a href="#planos" className="hover:text-sky-400 transition-colors">
-                  🇨🇦 Canadá (BHS)
-                </a>
+                <Link href="/vps" className="hover:text-sky-400 transition-colors">
+                  VPS Ryzen 9 9950X
+                </Link>
+              </li>
+              <li>
+                <Link href="/bare-metal" className="hover:text-sky-400 transition-colors">
+                  Servidores Dedicados EPYC
+                </Link>
               </li>
               <li>
                 <span className="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">
-                  Java &amp; Bedrock Crossplay
+                  Anti-DDoS 228 Tbps Incluso
                 </span>
               </li>
             </ul>
@@ -107,7 +179,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
-                <MessageSquare className="w-4 h-4 text-sky-400" />
+                <FaDiscord className="w-4 h-4 text-indigo-400" />
                 <a
                   href="https://discord.gg"
                   target="_blank"
@@ -118,7 +190,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-400" />
+                <FaWhatsapp className="w-4 h-4 text-emerald-400" />
                 <a
                   href="https://wa.me/5511999999999"
                   target="_blank"
@@ -147,7 +219,7 @@ export default function Footer() {
             &copy; {currentYear} NekoCloud. Todos os direitos reservados.
           </p>
           <p className="text-center md:text-right">
-            Minecraft é uma marca registrada da Mojang Studios / Microsoft. A NekoCloud não é afiliada ou endossada pela Mojang.
+            Minecraft é uma marca registrada da Mojang Studios / Microsoft. A NekoCloud não possui afiliação ou endosso pela Mojang Studios.
           </p>
         </div>
       </div>
