@@ -4,15 +4,17 @@ import React, { useEffect, useState } from "react";
 import { Users, Server, Globe2, Award } from "lucide-react";
 
 export default function Showcase() {
+  const [mounted, setMounted] = useState(false);
   const [stats, setStats] = useState({
-    clients: 0,
-    servers: 0,
-    countries: 0,
-    years: 0,
+    clients: 60000,
+    servers: 450000,
+    countries: 5,
+    years: 6,
   });
 
   useEffect(() => {
-    const duration = 1800; // ms
+    setMounted(true);
+    const duration = 1600;
     const frameRate = 30;
     const totalFrames = Math.round((duration / 1000) * frameRate);
     let frame = 0;
@@ -20,7 +22,6 @@ export default function Showcase() {
     const timer = setInterval(() => {
       frame++;
       const progress = Math.min(frame / totalFrames, 1);
-      // easeOutExpo
       const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
 
       setStats({
@@ -41,13 +42,13 @@ export default function Showcase() {
   const items = [
     {
       icon: Users,
-      value: `+${stats.clients.toLocaleString("pt-BR")}`,
+      value: mounted ? `+${stats.clients.toLocaleString("pt-BR")}` : "+60.000",
       label: "Clientes Confiantes",
       sub: "Comunidades e jogadores ativos",
     },
     {
       icon: Server,
-      value: `+${stats.servers.toLocaleString("pt-BR")}`,
+      value: mounted ? `+${stats.servers.toLocaleString("pt-BR")}` : "+450.000",
       label: "Servidores Criados",
       sub: "Iniciados com sucesso",
     },
@@ -66,8 +67,7 @@ export default function Showcase() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-sky-900 via-blue-950 to-slate-950 text-white relative overflow-hidden">
-      {/* Decorative Blur */}
+    <section className="py-16 bg-gradient-to-br from-sky-950 via-blue-950 to-slate-950 text-white relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -80,7 +80,10 @@ export default function Showcase() {
                 <div className="w-12 h-12 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center mb-4 border border-sky-500/30">
                   <Icon className="w-6 h-6" />
                 </div>
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white font-mono">
+                <span
+                  suppressHydrationWarning
+                  className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white font-mono"
+                >
                   {item.value}
                 </span>
                 <span className="mt-2 text-sm sm:text-base font-bold text-sky-200">

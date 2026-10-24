@@ -213,7 +213,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>
+          <p suppressHydrationWarning>
             &copy; {currentYear} NekoCloud. Licença MIT - Código Livre para Uso.
           </p>
           <p className="text-center md:text-right">
