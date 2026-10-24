@@ -134,17 +134,53 @@ body {
   animation: scanline 8s linear infinite;
 }
 
-/* Grid background pattern */
-.bg-grid-pattern {
-  background-size: 44px 44px;
-  background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+/* 3D Perspective Cyber Grid & Futuristic Background */
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 60px;
+  }
 }
 
-.dark .bg-grid-pattern {
-  background-size: 44px 44px;
+@keyframes beamSweep {
+  0%, 100% {
+    opacity: 0.2;
+    transform: translateY(-20%) scaleY(0.9);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(10%) scaleY(1.1);
+  }
+}
+
+.cyber-grid-3d {
+  position: absolute;
+  inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(56, 189, 248, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+    linear-gradient(to right, rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.12) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: perspective(600px) rotateX(65deg) translateY(-80px);
+  transform-origin: center top;
+  animation: gridMove 4s linear infinite;
+  mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 20%, transparent 80%);
+}
+
+.light-beam {
+  position: absolute;
+  top: -150px;
+  width: 450px;
+  height: 600px;
+  background: radial-gradient(ellipse at center, rgba(14, 165, 233, 0.25) 0%, rgba(2, 132, 199, 0.08) 50%, transparent 75%);
+  filter: blur(50px);
+  animation: beamSweep 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hex-bg {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
