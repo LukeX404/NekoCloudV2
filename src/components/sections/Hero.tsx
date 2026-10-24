@@ -40,7 +40,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden"
     >
       {/* Interactive Particles.js Background */}
       <ParticlesBackground />
