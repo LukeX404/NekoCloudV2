@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { PLANS_BR, PLANS_CAD, LOCATIONS } from "@/data/plans";
 import { Plan, LocationId } from "@/types";
-import CheckoutModal from "@/components/CheckoutModal";
+import CheckoutModal from "@/components/modals/CheckoutModal";
 import { Check, Zap, Server, Shield, Sparkles, Layers } from "lucide-react";
 
 export default function Plans() {

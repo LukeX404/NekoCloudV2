@@ -1,8 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Navbar, Footer } from "@/components";
 import { VPS_PLANS, VpsPlan } from "@/data/plans";
 import { Server, Cpu, HardDrive, ShieldCheck, Check, Zap, ArrowRight, MessageCircle } from "lucide-react";
 

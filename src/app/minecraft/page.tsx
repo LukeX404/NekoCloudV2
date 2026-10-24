@@ -1,9 +1,11 @@
-import Navbar from "@/components/Navbar";
-import PingTest from "@/components/PingTest";
-import Plans from "@/components/Plans";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
-import CommunityDiscord from "@/components/CommunityDiscord";
+import {
+  Navbar,
+  PingTest,
+  Plans,
+  Faq,
+  Footer,
+  CommunityDiscord,
+} from "@/components";
 import { Gamepad2, Cpu, Shield, Sparkles } from "lucide-react";
 
 export default function MinecraftPage() {

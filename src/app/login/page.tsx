@@ -2,8 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Navbar, Footer } from "@/components";
 import { FaSteam, FaGoogle } from "react-icons/fa";
 import { Lock, Mail, ArrowLeft, ShieldCheck, CheckCircle2, AlertCircle } from "lucide-react";
 

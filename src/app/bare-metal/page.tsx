@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Navbar, Footer } from "@/components";
 import { BARE_METAL_PLANS, BareMetalPlan } from "@/data/plans";
 import { HardDrive, Cpu, ShieldCheck, Check, Zap, Server, Network, Shield } from "lucide-react";
 

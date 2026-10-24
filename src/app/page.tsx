@@ -1,14 +1,16 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import VersionsTicker from "@/components/VersionsTicker";
-import PingTest from "@/components/PingTest";
-import Plans from "@/components/Plans";
-import Features from "@/components/Features";
-import Showcase from "@/components/Showcase";
-import CommunityDiscord from "@/components/CommunityDiscord";
-import Testimonials from "@/components/Testimonials";
-import Faq from "@/components/Faq";
-import Footer from "@/components/Footer";
+import {
+  Navbar,
+  Hero,
+  VersionsTicker,
+  PingTest,
+  Plans,
+  Features,
+  Showcase,
+  CommunityDiscord,
+  Testimonials,
+  Faq,
+  Footer,
+} from "@/components";
 
 export default function Home() {
   return (
