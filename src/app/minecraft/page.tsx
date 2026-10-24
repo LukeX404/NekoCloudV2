@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Navbar,
   PingTest,
@@ -7,6 +8,32 @@ import {
   CommunityDiscord,
 } from "@/components";
 import { Gamepad2, Cpu, Shield, Sparkles } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Hospedagem Minecraft Java & Bedrock - Ryzen 9 9950X",
+  description:
+    "Servidores Minecraft de alto desempenho equipados com AMD Ryzen 9 9950X (5.7GHz), proteção Anti-DDoS de 228 Tbps, subdomínio grátis e suporte completo a GeyserMC.",
+  openGraph: {
+    title: "Hospedagem Minecraft | NekoCloud - Ryzen 9 9950X",
+    description:
+      "Crie seu servidor de Minecraft com o máximo de TPS e zero lag. Proteção Anti-DDoS 228 Tbps e suporte a mods e plugins.",
+    url: "https://nekocloud.com.br/minecraft",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NekoCloud Minecraft Hosting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hospedagem Minecraft | NekoCloud",
+    description: "Servidores Minecraft com AMD Ryzen 9 9950X e Anti-DDoS 228 Tbps.",
+    images: ["/og-image.jpg"],
+  },
+};
 
 export default function MinecraftPage() {
   return (
